@@ -1,3 +1,4 @@
+import { IDespesa } from './../shared/modules/despesa.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+
+  dataSourceDespesas: IDespesa[] = [];
+  dataSourceReceitas: IDespesa[] = [];
+  displayedColumns = ['data','valor','tipo','fixo','descricao','acoes'];
 
   constructor() { }
 
