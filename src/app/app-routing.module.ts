@@ -1,12 +1,14 @@
-import { CadastroComponent } from './cadastro/cadastro.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 // Components
 import { LoginComponent } from './login/login.component';
 import { ReceitaComponent } from './relatorio/receita/receita.component';
 import { DespesaComponent } from './relatorio/despesa/despesa.component';
+import { CadastroComponent } from './cadastro/cadastro.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+// Security
+import { AutenticadorGuard } from './shared/security/autenticador-guard';
 
 const routes: Routes = [
   {path: '', redirectTo: 'login', pathMatch: 'full'},

@@ -1,3 +1,6 @@
+import { MenuTypeEnum } from './../../shared/enums/menu-type.enum';
+import { MenuService } from './../../shared/services/menu.service';
+import { IDespesa } from './../../shared/modules/despesa.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitaComponent implements OnInit {
 
-  constructor() { }
+  dataSource: IDespesa[] = [];
+  displayedColumns = ['data','valor','tipo','fixo','descricao','acoes'];
+
+  constructor(
+    private menuService: MenuService
+  ) { }
 
   ngOnInit(): void {
+    this.menuService.ondeEstou = MenuTypeEnum.RELATORIO_RECEITA;
   }
 
 }

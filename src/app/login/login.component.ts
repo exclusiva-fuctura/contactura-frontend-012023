@@ -16,6 +16,6 @@ export class LoginComponent implements OnInit {
   }
 
   onClick(): void {
-    this.route.navigate(['relatorio-despesa']);
+    this.route.navigate(['dashboard']);
   }
 }

@@ -1,3 +1,4 @@
+import { AutenticadorGuard } from './shared/security/autenticador-guard';
 import { AppState } from './app-state';
 import { SharedModule } from './shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -33,7 +34,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
     MaterialModule,
   ],
   providers: [
-    AppState
+    AppState,
+    AutenticadorGuard
   ],
   bootstrap: [AppComponent]
 })
