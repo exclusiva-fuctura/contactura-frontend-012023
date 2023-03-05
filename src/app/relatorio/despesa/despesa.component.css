@@ -73,3 +73,7 @@ h1 {
   height: 50px;
   margin-bottom: 25px;
 }
+
+tr.mat-footer-row td {
+  font-weight: bold;
+}

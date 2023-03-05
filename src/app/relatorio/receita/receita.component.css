@@ -58,6 +58,10 @@ table {
   text-align: left;
 }
 
+tr.mat-footer-row td {
+  font-weight: bold;
+}
+
 h1 {
   padding-top: 10px;
 }

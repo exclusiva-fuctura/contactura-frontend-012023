@@ -1,3 +1,4 @@
+import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './../shared/shared.module';
 import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
@@ -17,6 +18,7 @@ import { ReceitaComponent } from './receita/receita.component';
     CommonModule,
     SharedModule,
     MaterialModule,
+    ReactiveFormsModule,
     LancamentoRoutingModule
   ]
 })

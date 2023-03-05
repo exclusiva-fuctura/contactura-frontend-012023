@@ -1,6 +1,6 @@
 import { MenuTypeEnum } from './../../shared/enums/menu-type.enum';
 import { MenuService } from './../../shared/services/menu.service';
-import { IDespesa } from './../../shared/modules/despesa.interface';
+import { IDespesa } from '../../shared/models/despesa.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -21,4 +21,11 @@ export class ReceitaComponent implements OnInit {
     this.menuService.ondeEstou = MenuTypeEnum.RELATORIO_RECEITA;
   }
 
+    /**
+   * Calcular o total das das despesas
+   * @returns valor total do somatorio
+   */
+    getTotalCost() {
+      return this.dataSource.map(t => t.valor).reduce((acc, value) => acc + value, 0);
+    }
 }

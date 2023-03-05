@@ -1,5 +1,5 @@
-import { IReceita } from './shared/modules/receita.interface';
-import { IDespesa } from './shared/modules/despesa.interface';
+import { IReceita } from './shared/models/receita.interface';
+import { IDespesa } from './shared/models/despesa.interface';
 import { OperacaoTypeEnum } from './shared/enums/operacao-type.enum';
 
 export class AppState {

@@ -14,7 +14,7 @@ export class UsuarioService {
     return this.state.token;
   }
 
-  set token(valor: string) {
+  set token(valor: any) {
     this.state.token = valor;
   }
 

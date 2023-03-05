@@ -1,13 +1,18 @@
-import { HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { DaoService } from './dao.service';
-import { AppSettings } from './../../app.settings';
-import { IDespesa } from './../modules/despesa.interface';
-import { IReceita } from './../modules/receita.interface';
-import { ILancamento } from './../modules/lancamento.interface';
-import { OperacaoTypeEnum } from './../enums/operacao-type.enum';
-import { AppState } from './../../app-state';
 import { Injectable } from '@angular/core';
+import { HttpResponse } from '@angular/common/http';
+// libs
+import { Observable } from 'rxjs';
+// services
+import { DaoService } from './dao.service';
+// auxiliares
+import { AppSettings } from './../../app.settings';
+import { AppState } from './../../app-state';
+// models
+import { IDespesa } from '../models/despesa.interface';
+import { IReceita } from '../models/receita.interface';
+import { ILancamento } from '../models/lancamento.interface';
+// enums
+import { OperacaoTypeEnum } from './../enums/operacao-type.enum';
 
 @Injectable({
   providedIn: 'root'

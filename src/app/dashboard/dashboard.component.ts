@@ -1,4 +1,6 @@
-import { IDespesa } from './../shared/modules/despesa.interface';
+import { MenuTypeEnum } from './../shared/enums/menu-type.enum';
+import { MenuService } from './../shared/services/menu.service';
+import { IDespesa } from '../shared/models/despesa.interface';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -12,9 +14,13 @@ export class DashboardComponent implements OnInit {
   dataSourceReceitas: IDespesa[] = [];
   displayedColumns = ['data','valor','tipo','fixo','descricao','acoes'];
 
-  constructor() { }
+  constructor(
+    private menuService: MenuService
+  ) { }
 
   ngOnInit(): void {
+    // notificar ao menu em qual componente estou
+    this.menuService.ondeEstou = MenuTypeEnum.DASHBOARD;
   }
 
 }

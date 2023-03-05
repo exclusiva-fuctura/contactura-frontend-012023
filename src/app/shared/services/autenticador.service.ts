@@ -1,7 +1,7 @@
 import { AppSettings } from './../../app.settings';
 import { HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ILogin } from './../modules/login.intetrface';
+import { ILogin } from '../models/login.interface';
 import { DaoService } from './dao.service';
 import { Injectable } from '@angular/core';
 
@@ -20,6 +20,7 @@ export class AutenticadorService {
    * @returns token no header e login no payload
    */
   autenticar(login: ILogin): Observable<HttpResponse<ILogin>> {
-    return this.dao.post<ILogin>(AppSettings.API_AUTENTICADOR, login, DaoService.MEDIA_TYPE_APP_JSON);
+    return this.dao.post<ILogin>(AppSettings.API_AUTENTICADOR, login,
+      DaoService.MEDIA_TYPE_APP_JSON);
   }
 }
