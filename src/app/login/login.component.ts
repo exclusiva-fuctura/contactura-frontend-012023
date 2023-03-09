@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   private initForm(): void {
     this.formulario = this.formBuilder.group({
       email: ['', Validators.required],
-      senha: ['', Validators.required]
+      senha: ['', [Validators.required, Validators.minLength(3)]]
     });
   }
 

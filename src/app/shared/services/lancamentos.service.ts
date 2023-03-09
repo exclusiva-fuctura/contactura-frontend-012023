@@ -75,7 +75,7 @@ export class LancamentosService {
    * listar despesas criadas
    * @returns retorna lista de lancamentos
    */
-  listaDespesas(): Observable<HttpResponse<ILancamento[]>> {
+  listaLancamentos(): Observable<HttpResponse<ILancamento[]>> {
     return this.dao.get<ILancamento[]>(AppSettings.API_LANCAMENTOS, DaoService.MEDIA_TYPE_APP_JSON);
   }
   /**
